@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sertac</title>
+</head>
+
+<body>
+    <h1>This is My Page!</h1>
+    <p>Sertac Nergiz.</p>
+    <p id="nameLength"></p>
+    <p id="substringResult"></p>
+    <p id="upperCaseText"></p>
+    <p id="lowerCaseText"></p>
+    <p id="splitResult"></p>
+    <p id="additionResult"></p>
+    <p id="subtractionResult"></p>
+    <p id="divisionResult"></p>
+    <p id="multiplicationResult"></p>
+    <p id="xyzResult"></p>
+    <p id="joinStringResult"></p>
+    <p id="arrayPushResult"></p>
+    <p id="arrayPopResult"></p>
+    <p id="arrayShiftResult"></p>
+    <p id="arrayUnshiftResult"></p>
+    <p id="currentDate"></p>
+    <p id="birthDate"></p>
+    <p id="customDate"></p>
+    <p id="custom1Date"></p>
+    <p id="custom2Date"></p>
+    <p id="celsiustofahren"></p>
+    <p id="mlToLResult"></p>
+
+    <script>
+        let text1 = "SertacNergiz";
+        let length1 = text1.length;
+        document.getElementById("nameLength").textContent = "Name length: " + length1;
+    </script>
+
+    <script>
+        let text2 = "Lebron, Jordan, Magic";
+        let part = text2.slice(3, 10);
+        document.getElementById("substringResult").textContent = "Substring: " + part;
+    </script>
+
+    <script>
+        let text3 = "Hello";
+        let upperCaseText = text3.toUpperCase();
+        document.getElementById("upperCaseText").textContent = "Uppercase Text: " + upperCaseText;
+    </script>
+
+    <script>
+        let text4 = "Goodbye";
+        let lowerCaseText = text4.toLowerCase();
+        document.getElementById("lowerCaseText").textContent = "Lowercase Text: " + lowerCaseText;
+    </script>
+
+    <script>
+        let text5 = "Lebron,Magic,Jordan";
+        let splitResult = text5.split(",");
+        document.getElementById("splitResult").textContent = "Split Result: " + splitResult.join(", ");
+    </script>
+
+    <script>
+        let num1 = 2;
+        let num2 = 3;
+
+        let additionResult = num1 + num2;
+        let subtractionResult = num1 - num2;
+        let divisionResult = num1 / num2;
+        let multiplicationResult = num1 * num2;
+
+        document.getElementById("additionResult").textContent = "Addition: " + additionResult;
+        document.getElementById("subtractionResult").textContent = "Subtraction: " + subtractionResult;
+        document.getElementById("divisionResult").textContent = "Division: " + divisionResult;
+        document.getElementById("multiplicationResult").textContent = "Multiplication: " + multiplicationResult;
+    </script>
+
+    <script>
+        let x = 2;
+        let y = 3;
+        let z = 4;
+
+        let xyzResult = x * y + z;
+
+        document.getElementById("xyzResult").textContent = "x * y + z: " + xyzResult;
+    </script>
+
+    <script>
+        let stringArray = ["Lebron", "Magic", "Jordan"];
+        let joinStringResult = stringArray.join(", "); 
+        document.getElementById("joinStringResult").textContent = "Joined String: " + joinStringResult;
+    </script>
+
+    <script>
+        let number1Array = [1, 2, 3];
+        number1Array.push(6); 
+        document.getElementById("arrayPushResult").textContent = "Array after push: " + number1Array.join(", ");
+    </script>
+
+    <script>
+        let number2Array = [1, 2, 3];
+        let poppedValue = number2Array.pop(); 
+        document.getElementById("arrayPopResult").textContent = "Popped Value: " + poppedValue;
+    </script>
+
+    <script>
+        let number3Array = [1, 2, 3];
+        number3Array.shift(); 
+        document.getElementById("arrayShiftResult").textContent = "Array after shift: " + number3Array.join(", ");
+    </script>
+
+    <script>
+        let number4Array = [1, 2, 3];
+        number4Array.unshift(0); 
+        document.getElementById("arrayUnshiftResult").textContent = "Array after unshift: " + number4Array.join(", ");
+    </script>
+
+    <script>
+        let currentDate = new Date();
+        document.getElementById("currentDate").textContent = "Current Date: " + currentDate.toDateString();
+    </script>
+
+<script>
+    let birthDate = new Date("2004-03-12");
+    document.getElementById("birthDate").textContent = "Birth Date: " + birthDate.toDateString();
+</script>
+
+<script>
+    const customDate = new Date(2009, 10, 15, 12, 36, 37);
+    document.getElementById("customDate").textContent = "Custom Date: " + customDate.toString();
+</script>
+
+<script>
+    const custom1Date = new Date(2019, 11, 19, 10, 36);
+    document.getElementById("custom1Date").textContent = "Custom Date 2: " + custom1Date.toString();
+</script>
+
+<script>
+    const custom2Date = new Date(2007, 8, 9, 4);
+    document.getElementById("custom2Date").textContent = "Custom Date 3: " + custom2Date.toString();
+</script>
+
+<script>
+    function toFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+    }
+
+    let celsiustofahren = toFahrenheit(35);
+    document.getElementById("celsiustofahren").textContent = "35 Degrees Celsius to Fahrenheit: " + celsiustofahren + " Degrees Fahrenheit";
+</script>
+
+<script>
+    
+    function mlToL(ml) {
+        return ml / 1000;
+    }
+
+    let mlToLResult = mlToL(500);
+    document.getElementById("mlToLResult").textContent = "500 Milliliters to Liters: " + mlToLResult + " l";
+</script>
+
+</body>
+
+</html>
